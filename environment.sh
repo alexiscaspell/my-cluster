@@ -20,8 +20,11 @@ cmd_exec(){
     TARGET_PORT=${TARGET_PORT}
 
     if [[ "$EXECUTE_WITH_SSH" == "true" ]]; then
-        echo $(ssh $TARGET_USER@$TARGET_HOST -p $TARGET_PORT "$command")
+        echo "RUNNING ON $TARGET_USER@$TARGET_HOST:$TARGET_PORT"
+        echo "RUNNING COMMAND: \"$command\" ..."
+        echo $(ssh $TARGET_USER@$TARGET_HOST -p $TARGET_PORT -S "$command")
     else
+        echo "RUNNING COMMAND: $command ..."
         echo $(eval $command)
     fi
 }
