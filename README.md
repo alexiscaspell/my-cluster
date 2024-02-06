@@ -26,9 +26,19 @@ chmod +x connect_k3s_worker_node.sh
 ./connect_k3s_worker_node.sh
 ```
 
+# Montar volumen disco externo
+```bash
+sudo fdisk -l
+sudo fsck /dev/sda2
+df -h
+sudo fdisk -l
+sudo mount -t exfat /dev/sda2 /media/HIKVISION
+```
+
 # Tutoriales
 
 * Como hacer que neon se autologuee al encenderse la maquina: https://www.simplified.guide/kde/automatic-login
 * Adherir worker node k3s: https://pet2cattle.com/2021/04/k3s-join-nodes
 * Como montar un disco externo en linux: https://askubuntu.com/questions/177825/how-to-mount-an-external-hdd
     - Una aclaracion es que si el formato de disco aparece como ***Microsoft basic data*** simplemente es un ***exfat***
+* Setear IP estatica en ubuntu: https://www.freecodecamp.org/news/setting-a-static-ip-in-ubuntu-linux-ip-address-tutorial/

@@ -1,15 +1,15 @@
 ################################# ---- VARIABLES ---- #################################
 
-MASTER_HOST="myhost.com"
+MASTER_HOST="192.168.0.2"
 MASTER_PORT="22"
 MASTER_USER="user"
-MASTER_K3S_HOST="myk3shost.com"
+MASTER_K3S_HOST="master.com"
 
-WORKER_HOST="myotherhost.com"
+WORKER_HOST="192.168.0.3"
 WORKER_PORT="22"
 WORKER_USER="user2"
 
-EXECUTE_WITH_SSH=false
+EXECUTE_WITH_SSH=true
 
 ################################# ---- FUNCIONES ---- #################################
 
