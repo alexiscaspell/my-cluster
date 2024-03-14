@@ -32,7 +32,8 @@ sudo fdisk -l
 sudo fsck /dev/sda2
 df -h
 sudo fdisk -l
-sudo mount -t exfat /dev/sda2 /media/HIKVISION
+sudo mkdir -p /media/tostado/HIKVISION
+sudo mount -t exfat /dev/sda2 /media/tostado/HIKVISION
 ```
 
 # Tutoriales
