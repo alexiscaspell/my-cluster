@@ -7,8 +7,7 @@ tls-san:
   - \"$MASTER_K3S_HOST\"
 cluster-init: true"
 
-file_name="config.yaml"
-# file_name="/etc/rancher/k3s/config.yaml"
+file_name="/etc/rancher/k3s/config.yaml"
 
 echo "$content" > "$file_name"
 
