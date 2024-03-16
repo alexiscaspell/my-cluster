@@ -7,3 +7,4 @@ locals {
   worker_port = jsondecode(run_cmd("./environment.sh")).worker_port
   worker_user = jsondecode(run_cmd("./environment.sh")).worker_user
 }
+

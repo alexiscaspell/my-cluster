@@ -1,6 +1,11 @@
+include {
+  path = find_in_parent_folders("terragrunt_local.hcl")
+}
+
 locals {
     env_vars = read_terragrunt_config("../load_environment.hcl")
 }
+
 
 terraform {
     source = "git@github.com:alexiscaspell/terraform-modules.git//ssh-execute?ref=main"
