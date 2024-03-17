@@ -7,7 +7,8 @@ locals {
 }
 
 terraform {
-    source = "git@github.com:alexiscaspell/terraform-modules.git//argocd?ref=main"
+    source = "/home/tostado/Documentos/Repositorios/terraform-modules/argocd"
+    # source = "git@github.com:alexiscaspell/terraform-modules.git//argocd?ref=main"
 }
 
 inputs = {
@@ -18,4 +19,12 @@ inputs = {
   sets = {
     "config.secret.argocdServerAdminPassword" = "password"
   }
+
+  repositories = [
+    {
+      "name": "gitops",
+      "url": "https://github.com/alexiscaspell/cluster-gitops"
+      "password": "password"
+    }
+  ]
 }
