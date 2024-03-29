@@ -7,8 +7,7 @@ locals {
 }
 
 terraform {
-    source = "/home/tostado/Documentos/Repositorios/terraform-modules/argocd"
-    # source = "git@github.com:alexiscaspell/terraform-modules.git//argocd?ref=main"
+    source = "git@github.com:alexiscaspell/terraform-modules.git//argocd?ref=main"
 }
 
 inputs = {

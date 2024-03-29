@@ -4,7 +4,7 @@ include {
 
 locals {
     env_vars = read_terragrunt_config("../load_environment.hcl")
-    script_path  = "/home/tostado/Documentos/Repositorios/my-cluster/bash/install_k3s.sh"
+    script_path  = "/home/tostado/Documentos/Repositorios/my-cluster/bash/create_k3s_worker_node.sh"
     local_dir  = "/home/tostado/Documentos/Repositorios/my-cluster/bash"
 }
 
@@ -20,5 +20,4 @@ inputs = {
     ssh_password = "mypassword"
     script_path  = local.script_path
     local_directory = local.local_dir
-
 }
