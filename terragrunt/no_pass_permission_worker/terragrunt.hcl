@@ -4,7 +4,7 @@ include {
 
 locals {
     env_vars = read_terragrunt_config("../load_environment.hcl")
-    script_path  = "/home/tostado/Documentos/Repositorios/my-cluster/bash/connect_k3s_worker_node.sh"
+    script_path  = "/home/tostado/Documentos/Repositorios/my-cluster/bash/add_nopass_permission.sh"
     local_dir  = "/home/tostado/Documentos/Repositorios/my-cluster/bash"
 }
 

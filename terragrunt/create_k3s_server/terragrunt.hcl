@@ -17,7 +17,7 @@ inputs = {
     ssh_host     = local.env_vars.locals.master_host
     ssh_port     = local.env_vars.locals.master_port
     ssh_user     = local.env_vars.locals.master_user
-    ssh_password = "mypassword"
+    ssh_password = local.env_vars.locals.master_ssh_pass
     script_path  = local.script_path
     local_directory = local.local_dir
 

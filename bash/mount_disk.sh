@@ -1,3 +1,5 @@
+#!/bin/bash
+
 DISK_TO_MOUNT="${1:-/dev/sda2}"
 DIR_TO_MOUNT="${2:-/media/tostado/HIKVISION}"
 

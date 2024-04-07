@@ -9,6 +9,10 @@ cluster-init: true"
 
 file_name="/etc/rancher/k3s/config.yaml"
 
-echo "$content" > "$file_name"
+sudo mkdir -p /etc/rancher/k3s
+
+sudo echo "$content" > "$file_name"
 
 echo "Content has been written to $file_name"
+
+sudo systemctl restart k3s

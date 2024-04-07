@@ -16,14 +16,26 @@ inputs = {
   kubeconfig_path = "/home/tostado/.kube/cluster_k3s_tostado"
   kube_context = "cluster_k3s_tostado"
   sets = {
-    "config.secret.argocdServerAdminPassword" = "password"
+    "config.secret.argocdServerAdminPassword" = "mypassword"
+    "server.config.url" = "http://argo.tostado.theworkpc.com"
+    "configs.params.server.insecure" = "true"
   }
 
   repositories = [
     {
       "name": "gitops",
-      "url": "https://github.com/alexiscaspell/cluster-gitops"
-      "password": "password"
+      "url": "https://github.com/alexiscaspell/cluster-gitops",
+      "password": "password-repo"
+    }
+  ]
+
+  applications = [
+    {
+      "name": "root",
+      "repo_url": "https://github.com/alexiscaspell/cluster-gitops",
+      "path": "root-app/",
+      "project": "default",
+      "namespace": "default"
     }
   ]
 }
