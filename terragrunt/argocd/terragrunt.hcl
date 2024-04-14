@@ -11,21 +11,19 @@ terraform {
 }
 
 inputs = {
-  argocd_version = "5.10.5"
+  argocd_version = "6.0.9"
   namespace    = "argocd"
   kubeconfig_path = "/home/tostado/.kube/cluster_k3s_tostado"
   kube_context = "cluster_k3s_tostado"
   sets = {
     "config.secret.argocdServerAdminPassword" = "mypassword"
-    "server.config.url" = "http://argo.tostado.theworkpc.com"
-    "configs.params.server.insecure" = "true"
   }
 
   repositories = [
     {
       "name": "gitops",
       "url": "https://github.com/alexiscaspell/cluster-gitops",
-      "password": "password-repo"
+      "password": "mypassword"
     }
   ]
 
